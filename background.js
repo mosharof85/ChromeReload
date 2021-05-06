@@ -16,7 +16,8 @@ const urls = [
     'https://www.fiverr.com/inbox/manousky',
     'https://www.fiverr.com/inbox/anandsat',
     'https://www.fiverr.com/inbox/hmjl77',
-    'https://www.fiverr.com/inbox/hello2050'
+    'https://www.fiverr.com/inbox/hello2050',
+    'https://www.fiverr.com/manage_contacts?'
 
 ];
 
@@ -65,7 +66,7 @@ function myFunction() {
                 if (tb.url.includes(url)) {
                     var nowUrl = urls[Math.floor(Math.random() * urls.length)];
                     chrome.tabs.update(tb.id, {url: nowUrl});
-                    console.log(new Date().toLocaleString());
+                    console.log(new Date().toLocaleString(), nowUrl);
                 }
             })
         })
