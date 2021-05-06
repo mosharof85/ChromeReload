@@ -1,0 +1,29 @@
+{
+  "name": "Chrome Reload",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Chrome Reload",
+  "homepage_url": "https://mosharof85.github.io/",
+  "icons": {
+    "18": "./icons/18x18.png",
+    "32": "./icons/32x32.png",
+    "48": "./icons/48x48.png",
+    "128": "./icons/128x128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Chrome Reload"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "storage"
+  ]
+}

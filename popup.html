@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Reload Fiverr</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <style>
+        html,
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            margin: 0;
+            min-height: 60px;
+            padding: 0;
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .switch{
+            position: relative;
+            width: 55px;
+            height: 30px;
+            display: block;
+        }
+
+        .slider{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #cccccc;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .switch input{
+            display: none;
+        }
+
+        .slider::before{
+            position: absolute;
+            content: '';
+            height: 25px;
+            width: 25px;
+            top: 2.5px;
+            left: 2.5px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            transition: .4s;
+            cursor: pointer;
+        }
+
+        .switch input:checked + .slider{
+            background-color: #ff278c;
+        }
+
+        .switch input:checked + .slider::before{
+            left: 27.5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <label for="chkStatus" class="switch">
+        <input type="checkbox" id="chkStatus">
+        <span class="slider"></span>
+    </label>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
